@@ -15,4 +15,17 @@
     border: 1px solid gray;
     opacity: 0.3;
     box-shadow: 10px 10px 10px rgb(124, 124, 124);
+    display: flex;
+    justify-content: right;
+    
+}
+.calculator #calculator-text-box {
+    background-color: rgb(255, 255, 255);
+    border-left: 4px solid gray;
+    border-bottom: 4px solid gray;
+    color: rgb(0, 0, 0);
+    width: 40vw;
+    height: 10vh;
+    font-size: 10vh;
+    text-align: right;
 }
