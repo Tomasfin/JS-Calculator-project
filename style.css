@@ -12,20 +12,44 @@
     background-color: rgb(255, 255, 255);
     width: 50vw;
     height: 60vh;
-    border: 1px solid gray;
     opacity: 0.3;
     box-shadow: 10px 10px 10px rgb(124, 124, 124);
     display: flex;
-    justify-content: right;
-    
+    justify-content: flex-end;
+    position: relative;
 }
 .calculator #calculator-text-box {
     background-color: rgb(255, 255, 255);
-    border-left: 4px solid gray;
     border-bottom: 4px solid gray;
     color: rgb(0, 0, 0);
-    width: 40vw;
-    height: 10vh;
+    width: 49.4vw;
+    height: 14vh;
     font-size: 10vh;
     text-align: right;
+    
+}
+.calculator button {
+    background-color: red;
+    height: 9vh;
+    width: 10vw;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.calculator .calc-buttons {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    right: 0vw;
+    bottom: 0vh;
+
+}
+.calculator .calc-buttons .top-buttons,
+.calculator .calc-buttons .second-top-buttons,
+.calculator .calc-buttons .middle-buttons,
+.calculator .calc-buttons .second-bottom-buttons,
+.calculator .calc-buttons .bottom-buttons {
+    display: flex;
 }
