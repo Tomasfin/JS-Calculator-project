@@ -7,13 +7,19 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" 
+        onload="renderMathInElement(document.body);"></script>
+</script>
     </head>
     <body>
         <script src="./script.js" async defer></script>
         <main class="background">
             <section class="calculator">
                 <section class="text-box">
-                    <input type="text" id="calculator-text-box" name="calculator-text-box">
+                    <input type="text" id="calculator-text-box" name="calculator-text-box" readonly/>
+                    <div id="math-output"></div>
                 </section>
                 <section class="calc-buttons">
                     <section class="top-buttons">
@@ -28,31 +34,23 @@
                         <button type="button" id="7">7</button>
                         <button type="button" id="8">8</button>
                         <button type="button" id="9">9</button>
-                        <button type="button" id="division">÷</button>
+                        <button type="button" id="/">÷</button>
                     </section>
                     <section class="middle-buttons">
                         <button type="button" id="logarithm">log</button>
                         <button type="button" id="4">4</button>
                         <button type="button" id="5">5</button>
                         <button type="button" id="6">6</button>
-                        <button type="button" id="multiplication">x</button>
+                        <button type="button" id="*">x</button>
                     </section>
                     <section class="second-bottom-buttons">
                         <button type="button" id="sqrt">√</button>
                         <button type="button" id="1">1</button>
                         <button type="button" id="2">2</button>
                         <button type="button" id="3">3</button>
-                        <button type="button" id="subtraction">-</button>
+                        <button type="button" id="-">-</button>
                     </section>
                     <section class="bottom-buttons">
                         <button type="button" id="squared">xʸ</button>
                         <button type="button" id="0">0</button>
-                        <button type="button" id=".">.</button>
-                        <button type="button" id="=">=</button>
-                        <button type="button" id="addition">+</button>
-                    </section>
-                </section>
-            </section>
-        </main>
-    </body>
-</html>
+                        <
