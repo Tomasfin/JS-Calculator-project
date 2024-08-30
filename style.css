@@ -1,4 +1,6 @@
-
+* {
+    font-family:monospace
+}
 .background {
     display: flex;
     margin: 0, auto;
@@ -23,19 +25,17 @@
     color: rgb(0, 0, 0);
     width: 49.4vw;
     height: 14vh;
-    font-size: 10vh;
+    font-size: 8vw;
     text-align: right;
-    
 }
 .calculator button {
-    background-color: rgb(178, 238, 255);
+    background-color: #b33c3c;
     height: 9vh;
     width: 10vw;
-    font-size: 5vh;
+    font-size: 3vw;
     display: flex;
     justify-content: center;
     align-items:center;
-    
 }
 .calculator .calc-buttons {
     display: flex;
@@ -43,8 +43,24 @@
     flex-direction: column;
     right: 0vw;
     bottom: 0vh;
-
 }
+
+.color-picker {
+    position: absolute;
+    left: 0vw;
+    top: 50vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+}
+.color-picker #button-color-picker {
+    width: 10vw;
+}
+.color-picker #text-color-picker {
+    width: 10vw;
+}
+
+
 .calculator .calc-buttons .top-buttons,
 .calculator .calc-buttons .second-top-buttons,
 .calculator .calc-buttons .middle-buttons,
@@ -52,3 +68,4 @@
 .calculator .calc-buttons .bottom-buttons {
     display: flex;
 }
+

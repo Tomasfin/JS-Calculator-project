@@ -7,15 +7,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" 
-        onload="renderMathInElement(document.body);"></script>
+    
 </script>
     </head>
     <body>
         <script src="./script.js" async defer></script>
         <main class="background">
+            <section class="color-picker">
+                <div>Change button color</div>
+                <input type="color" id="button-color-picker" value="#b33c3c">
+                <div>Change text color</div>
+                <input type="color" id="text-color-picker" value="#000000">
+            </section>
             <section class="calculator">
                 <section class="text-box">
                     <input type="text" id="calculator-text-box" name="calculator-text-box"/>
