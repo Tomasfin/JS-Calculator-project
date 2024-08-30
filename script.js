@@ -7,7 +7,7 @@ calcButtons.forEach(function(button){
 })
 function calcInput(event){
     let buttontype = event.target.id;
-    if (textBox.value.includes('=')){
+    if (textBox.value.includes('=') || textBox.value.includes('Error')){
         textBox.value = "" }
     switch(buttontype) {
         case '0':
@@ -52,8 +52,35 @@ function calcInput(event){
         case '/':
             textBox.value += '/';
             break;
+        case 'left-bracket':
+            textBox.value += '(';
+            break;
+        case 'right-bracket':
+            textBox.value += ')';
+            break;
+        case '.':
+            textBox.value += '.';
+            break;
         case '=':
             calculate();
+            break;
+        case '%':
+            textBox.value += '%';
+            break;
+        case 'logarithm':
+            textBox.value += 'log(';
+            break;
+        case 'nat-logarithm':
+            textBox.value += 'ln(';
+            break;
+        case 'squared':
+            textBox.value += "^";
+            break;
+        case 'sqrt':
+            textBox.value += '√';
+            break;
+        case 'factorial':
+            textBox.value += '!'
             break;
         case 'backspace':
             textBox.value = textBox.value.slice(0, -1);
@@ -61,5 +88,28 @@ function calcInput(event){
         
     }}
 function calculate() {
-    textBox.value = "=" + eval(textBox.value)
+    let expression = textBox.value
+    .replace(/log\(/g, 'Math.log10(')
+    .replace(/ln\(/g, 'Math.log(')
+    .replace(/\^/g, '**')
+    .replace(/√(\d+)/g, 'Math.sqrt($1)')
+    .replace(/(\d+)!/g,  'factorial($1)')
+    .replace(/(\d+)%/g, '$1 / 100'
+    )
+    if (expression.includes('(') && (!expression.includes(')'))){
+        expression += ')'}
+    try{
+        textBox.value = "=" + eval(expression)}
+    catch {
+        textBox.value = 'Error'
+    }
+}
+function factorial(num){
+    if (num <= 1){
+        return num
+    }
+    else{
+        return num * factorial(num - 1)
+    }
+
 }

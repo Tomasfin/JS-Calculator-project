@@ -28,4 +28,27 @@
     
 }
 .calculator button {
-    background-color: rgb(17
+    background-color: rgb(178, 238, 255);
+    height: 9vh;
+    width: 10vw;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.calculator .calc-buttons {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    right: 0vw;
+    bottom: 0vh;
+
+}
+.calculator .calc-buttons .top-buttons,
+.calculator .calc-buttons .second-top-buttons,
+.calculator .calc-buttons .middle-buttons,
+.calculator .calc-buttons .second-bottom-buttons,
+.calculator .calc-buttons .bottom-buttons {
+    display: flex;
+}
